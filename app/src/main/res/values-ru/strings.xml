@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Loftmoney</string>
-    <string name="enter_name">Введите название</string>
-    <string name="enter_price">Введите цену</string>
-    <string name="send_button">Отправить</string>
+    <string name="enter_name">Название</string>
+    <string name="enter_price">Расход</string>
+    <string name="send_button">Добавить</string>
 
     <array name="main_page_titles">
         <item>Расходы</item>

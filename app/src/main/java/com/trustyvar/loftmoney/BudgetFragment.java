@@ -13,12 +13,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.trustyvar.loftmoney.items.Item;
+import com.trustyvar.loftmoney.items.ItemsAdapter;
+
+import java.util.ArrayList;
+
 public class BudgetFragment extends Fragment {
 
     private static final String ARG_CURRENT_POSITION = "current_position";
 
     private RecyclerView itemsView;
     private int currentPosition;
+    private ItemsAdapter itemsAdapter = new ItemsAdapter();
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -30,9 +36,15 @@ public class BudgetFragment extends Fragment {
     private void configureRecyclerView() {
         itemsView = getView().findViewById(R.id.rv_items);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        itemsView.setLayoutManager(layoutManager);
+        itemsView.setAdapter(itemsAdapter);
 
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
         itemsView.addItemDecoration(dividerItemDecoration);
+
+    }
+
+    private void addItems() {
 
     }
 
